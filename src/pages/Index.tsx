@@ -21,7 +21,7 @@ const Index = () => {
       
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-grocery-50 via-white to-grocery-100 py-12 md:py-20">
+        <section className="relative bg-gradient-to-br  from-grocery-50 via-white to-grocery-100 py-0 pt-16 md:pt-16 md:py-0">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6 animate-fade-in">
@@ -49,16 +49,12 @@ const Index = () => {
               </div>
               
               <div className="relative animate-slide-up">
-                <div className="aspect-square relative rounded-2xl overflow-hidden shadow-2xl">
+                <div className="aspect-square relative rounded-2xl overflow-hidden ">
                   <img
-                    src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=600&fit=crop"
+                    src="/banner-image.png"
                     alt="Fresh groceries"
                     className="w-full h-full object-cover"
                   />
-                </div>
-                {/* Floating Badge */}
-                <div className="absolute -top-4 -right-4 bg-white rounded-full p-4 shadow-lg">
-                  <Clock className="h-8 w-8 text-grocery-600" />
                 </div>
               </div>
             </div>
