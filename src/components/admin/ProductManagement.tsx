@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+  import productsArray from '../../data/products-demo.json'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Switch } from '@/components/ui/switch';
@@ -60,54 +61,55 @@ export function ProductManagement() {
   });
 
   // Mock data - in real app, this would come from your backend
-  const [products, setProducts] = useState<Product[]>([
-    {
-      id: 'PROD-001',
-      name: 'Fresh Bananas',
-      description: 'Sweet and ripe bananas, perfect for snacking',
-      price: 25.99,
-      originalPrice: 29.99,
-      category: 'Fruits',
-      brand: 'Fresh Farm',
-      unit: 'per kg',
-      inStock: true,
-      stockQuantity: 50,
-      rating: 4.5,
-      reviewCount: 124,
-      featured: true,
-      image: '/placeholder.svg'
-    },
-    {
-      id: 'PROD-002',
-      name: 'Organic Milk',
-      description: 'Fresh organic milk from grass-fed cows',
-      price: 45.50,
-      category: 'Dairy',
-      brand: 'Pure Dairy',
-      unit: 'per liter',
-      inStock: true,
-      stockQuantity: 25,
-      rating: 4.8,
-      reviewCount: 89,
-      featured: false,
-      image: '/placeholder.svg'
-    },
-    {
-      id: 'PROD-003',
-      name: 'Whole Wheat Bread',
-      description: 'Freshly baked whole wheat bread',
-      price: 28.99,
-      category: 'Bakery',
-      brand: 'Golden Grain',
-      unit: 'per loaf',
-      inStock: false,
-      stockQuantity: 0,
-      rating: 4.2,
-      reviewCount: 56,
-      featured: false,
-      image: '/placeholder.svg'
-    }
-  ]);
+    const [products, setProducts] = useState<Product[]>(productsArray)
+  // const [products, setProducts] = useState<Product[]>([
+  //   {
+  //     id: 'PROD-001',
+  //     name: 'Fresh Bananas',
+  //     description: 'Sweet and ripe bananas, perfect for snacking',
+  //     price: 25.99,
+  //     originalPrice: 29.99,
+  //     category: 'Fruits',
+  //     brand: 'Fresh Farm',
+  //     unit: 'per kg',
+  //     inStock: true,
+  //     stockQuantity: 50,
+  //     rating: 4.5,
+  //     reviewCount: 124,
+  //     featured: true,
+  //     image: '/placeholder.svg'
+  //   },
+  //   {
+  //     id: 'PROD-002',
+  //     name: 'Organic Milk',
+  //     description: 'Fresh organic milk from grass-fed cows',
+  //     price: 45.50,
+  //     category: 'Dairy',
+  //     brand: 'Pure Dairy',
+  //     unit: 'per liter',
+  //     inStock: true,
+  //     stockQuantity: 25,
+  //     rating: 4.8,
+  //     reviewCount: 89,
+  //     featured: false,
+  //     image: '/placeholder.svg'
+  //   },
+  //   {
+  //     id: 'PROD-003',
+  //     name: 'Whole Wheat Bread',
+  //     description: 'Freshly baked whole wheat bread',
+  //     price: 28.99,
+  //     category: 'Bakery',
+  //     brand: 'Golden Grain',
+  //     unit: 'per loaf',
+  //     inStock: false,
+  //     stockQuantity: 0,
+  //     rating: 4.2,
+  //     reviewCount: 56,
+  //     featured: false,
+  //     image: '/placeholder.svg'
+  //   }
+  // ]);
 
   const categories = ['Fruits', 'Vegetables', 'Dairy', 'Meat', 'Bakery', 'Beverages', 'Snacks', 'Pantry'];
 

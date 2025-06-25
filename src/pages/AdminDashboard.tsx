@@ -19,14 +19,16 @@ import { OrderManagement } from '@/components/admin/OrderManagement';
 import { ProductManagement } from '@/components/admin/ProductManagement';
 import { EmailManagement } from '@/components/admin/EmailManagement';
 import { UserManagement } from '@/components/admin/UserManagement';
+import { Header } from '@/components/layout/Header';
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('overview');
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen  bg-gray-50">
+    <Header/>
       <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="__disabled__max-w-7xl container mx-auto px-4 __disabled__sm:px-6 __disabled__lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div>
               <h1 className="text-3xl font-bold text-gray-900">FreshExpress Admin Dashboard</h1>
@@ -39,7 +41,7 @@ export default function AdminDashboard() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="__disabled__max-w-7xl container mx-auto px-4 __disabled__sm:px-6 __disabled__lg:px-8 py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           <TabsList className="grid w-full grid-cols-5 lg:w-auto lg:grid-cols-none lg:inline-flex">
             <TabsTrigger value="overview" className="flex items-center gap-2">
