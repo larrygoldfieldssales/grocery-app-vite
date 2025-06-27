@@ -18,7 +18,7 @@ import { Footer } from '@/components/layout/Footer';
 import { useCart } from '@/context/CartContext';
 import { Order, CheckoutForm } from '@/types';
 import { STORAGE_KEYS, setToStorage, getFromStorage } from '@/lib/localStorage';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/hooks/use-toast'; 
 
 const checkoutFormSchema = z.object({
   firstName: z.string().min(2, 'First name must be at least 2 characters'),
@@ -60,7 +60,7 @@ const Checkout = () => {
     navigate('/cart');
     return null;
   }
-
+ 
   const onSubmit = async (data: CheckoutForm) => {
     setIsProcessing(true);
     
@@ -82,6 +82,8 @@ const Checkout = () => {
       // Save order to localStorage
       const existingOrders = getFromStorage<Order[]>(STORAGE_KEYS.ORDERS, []);
       setToStorage(STORAGE_KEYS.ORDERS, [...existingOrders, order]);
+
+     
 
       // Clear cart
       clearCart();

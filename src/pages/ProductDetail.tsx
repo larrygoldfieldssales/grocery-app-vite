@@ -49,6 +49,14 @@ const ProductDetail = () => {
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : 0;
 
+//     async function handleAddToCart(productId: string) {
+//   try {
+//     await cartApi.addToCart(productId, 1, 99.99);
+//     // Refresh cart state or UI
+//   } catch (error) {
+//     // Error already handled by the API function
+//   }
+// }
   const handleAddToCart = () => {
     addToCart(product, quantity);
   };
@@ -123,7 +131,7 @@ const ProductDetail = () => {
               {/* Price */}
               <div className="flex items-center gap-4">
                 <span className="text-3xl font-bold text-gray-900">
-                  R{product.price.toFixed(2)}
+                  R{product?.price?.toFixed(2)}
                 </span>
                 {product.originalPrice && (
                   <span className="text-xl text-gray-500 line-through">

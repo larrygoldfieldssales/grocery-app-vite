@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { 
   Package, 
   ShoppingCart, 
   Users, 
   Mail, 
   TrendingUp, 
-  Clock,
-  CheckCircle,
-  Truck,
-  AlertCircle
 } from 'lucide-react';
 import { DashboardStats } from '@/components/admin/DashboardStats';
 import { OrderManagement } from '@/components/admin/OrderManagement';

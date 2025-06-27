@@ -408,7 +408,7 @@ export function ProductManagement() {
                     <TableCell>{product.category}</TableCell>
                     <TableCell>
                       <div>
-                        <p className="font-medium">R{product.price.toFixed(2)}</p>
+                        <p className="font-medium">R{product?.price?.toFixed(2)}</p>
                         {product.originalPrice && (
                           <p className="text-sm text-gray-500 line-through">
                             R{product.originalPrice.toFixed(2)}

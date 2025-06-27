@@ -4,8 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { 
   ShoppingCart, 
   Package, 
-  Users, 
-  TrendingUp,
+  Users,  
   Clock,
   CheckCircle,
   Truck,

@@ -92,7 +92,7 @@ const Cart = () => {
                           {item.product.unit}
                         </p>
                         <p className="font-bold text-lg mt-2">
-                          R{item.product.price.toFixed(2)}
+                          R{item.product?.price?.toFixed(2)}
                         </p>
                       </div>
 
